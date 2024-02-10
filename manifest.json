@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter Auto-Follow",
+    "version": "1.0",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "test.png",
+        "48": "test.png",
+        "128": "test.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://twitter.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "test.png",
+      "48": "test.png",
+      "128": "test.png"
+    }
+  }
